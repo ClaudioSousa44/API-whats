@@ -1,4 +1,5 @@
-const contatos = { "whats-users" :
+
+const contatos = { "whats" :
                           [
                             {  
                               "id" : 1,    
@@ -568,3 +569,8 @@ const contatos = { "whats-users" :
                             }
                           ]
                         }
+
+module.exports ={
+  contatos
+}
+

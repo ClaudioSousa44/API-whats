@@ -1,20 +1,19 @@
 const contatos = require('./contatos.js');
 
-const idCliente = (id) => {
+const idCliente = (id, listaContatos) => {
     let status = false;
-    let contactsArray = [];
+    let contactsJson = {};
+    
     
 
-    contatos.contatos.whats-users.forEach(perfil => {
+    listaContatos.whats.forEach((perfil) => {
         if(perfil.id == id){
-            perfil.contacts.forEach(contato => {
-                let pessoa = {};
-                pessoa.name = contato.name;
-                pessoa.description = contato.description;
-                
-                
-            })
+            contactsJson.contatos = perfil.contacts;
+            
         }
-        
     });
+
+    return contactsJson;
 };
+
+console.log(idCliente(1, contatos.contatos));
